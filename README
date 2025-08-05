@@ -1,0 +1,22 @@
+# CRUD Application
+
+This project is a simple CRUD (Create, Read, Update, Delete) application.
+
+## Getting Started
+
+1. **Set up venv and install requirements**
+    ```
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
+
+
+2. **Enter to .env**
+    ```
+    change setting for your pc
+    ```
+
+3. **Run Project**
+    - uvicorn main:app --reload
+
