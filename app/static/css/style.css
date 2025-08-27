@@ -1,0 +1,445 @@
+/* --- BASE STYLES --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #181a20;
+    color: #f5f5f5;
+    min-height: 100vh;
+}
+a {
+    color: #e50914;
+    text-decoration: none;
+    transition: color 0.18s;
+}
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+header {
+    background: #14151b;
+    padding: 1.2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+}
+header h1 {
+    color: #e50914;
+    margin: 0;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+nav {
+    margin: 1.2rem 0 0.8rem 0;
+    text-align: center;
+}
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.18s;
+}
+nav a.active,
+nav a:hover {
+    color: #e50914;
+}
+.container {
+    max-width: 880px;
+    margin: 2.5rem auto;
+    background: #23242b;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.14);
+    border-radius: 10px;
+    padding: 2rem 2.3rem;
+}
+.page-title {
+    font-size: 2.1rem;
+    margin-bottom: 1.2rem;
+    color: #e50914;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.button,
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: #e50914;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.16s;
+    text-decoration: none;
+    font-weight: 500;
+}
+.button:hover,
+.btn:hover {
+    background: #b0060e;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border-radius: 7px;
+    border: 1px solid #2d2f36;
+    background: #181a20;
+    color: #f5f5f5;
+    margin-bottom: 1.1rem;
+    font-size: 1rem;
+    transition: border 0.15s;
+}
+input:focus, select:focus, textarea:focus {
+    border: 1.5px solid #e50914;
+    outline: none;
+}
+form {
+    max-width: 430px;
+    margin: 2.5rem auto;
+    padding: 2rem 1.2rem;
+    background: #23242b;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #e50914;
+}
+.error-message {
+    color: #e50914;
+    background: #291214;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 0.98rem;
+    text-align: center;
+}
+.success-message {
+    color: #44e509;
+    background: #162914;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 0.98rem;
+    text-align: center;
+}
+footer {
+    background: #14151b;
+    color: #b3b3b3;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2.5rem;
+    font-size: 0.97rem;
+    border-top: 1px solid #23242b;
+}
+
+/* --- FILM DETAIL --- */
+.film-detail {
+    display: flex;
+    gap: 2.2rem;
+    align-items: flex-start;
+}
+.film-detail img {
+    max-width: 270px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+}
+.film-info {
+    flex: 1;
+}
+.film-info h2 {
+    color: #e50914;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+.film-meta {
+    color: #aaa;
+    font-size: 1.08rem;
+    margin-bottom: 1.2rem;
+}
+.film-desc {
+    font-size: 1.09rem;
+    color: #e5e5e5;
+    margin-bottom: 1.4rem;
+}
+.film-actions {
+    margin-top: 1.2rem;
+}
+.film-actions .btn {
+    margin-right: 1rem;
+}
+
+/* --- LOGIN / REGISTER / RESET PASSWORD --- */
+.auth-page {
+    max-width: 400px;
+    margin: 2.5rem auto;
+    padding: 2rem 1.2rem;
+    background: #23242b;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+}
+.auth-title {
+    text-align: center;
+    color: #e50914;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.auth-link {
+    text-align: center;
+    margin-top: 1.1rem;
+    font-size: 1rem;
+}
+.auth-link a {
+    color: #e50914;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.auth-link a:hover {
+    color: #fff;
+}
+
+/* --- PROFILE PAGE --- */
+.profile-container {
+    background: #21222a;
+    padding: 2rem 2.3rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: 2.5rem auto;
+}
+.profile-container h2 {
+    color: #e50914;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.profile-info {
+    font-size: 1.08rem;
+    color: #e5e5e5;
+    margin-bottom: 1.2rem;
+}
+.profile-actions .btn {
+    margin-right: 1rem;
+}
+
+/* --- ADMIN PAGE --- */
+.admin-container {
+    background: #23242b;
+    padding: 2rem 2.3rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    max-width: 900px;
+    margin: 2.5rem auto;
+}
+.admin-title {
+    color: #e50914;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+}
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+    background: #21222a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.admin-table th, .admin-table td {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    font-size: 1rem;
+}
+.admin-table th {
+    background: #1a1b22;
+    color: #e50914;
+    font-weight: 600;
+    border-bottom: 2px solid #e50914;
+}
+.admin-table td {
+    background: #23242b;
+    color: #f5f5f5;
+    border-bottom: 1px solid #292b32;
+}
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+.admin-actions .btn {
+    margin-right: 0.45rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .container, .admin-container, .profile-container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    .film-detail {
+        flex-direction: column;
+        gap: 1.3rem;
+        align-items: stretch;
+    }
+    .film-detail img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .container, .admin-container, .profile-container, .auth-page {
+        padding: 0.6rem;
+    }
+    .film-detail {
+        gap: 0.7rem;
+    }
+}
+
+/* --- UTILITY CLASSES --- */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.d-flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.align-center { align-items: center; }
+.rounded { border-radius: 8px; }
+.shadow { box-shadow: 0 2px 12px rgba(0,0,0,0.14); }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #181a20;
+    color: #f5f5f5;
+    min-height: 100vh;
+}
+
+header {
+    background: #14151b;
+    padding: 1.2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+}
+
+header h1 {
+    color: #e50914;
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.18s;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+.container {
+    max-width: 880px;
+    margin: 2rem auto;
+    background: #23242b;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.14);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.film-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.film-card {
+    background: #1a1b22;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.16s, box-shadow 0.16s;
+}
+
+.film-card:hover {
+    transform: translateY(-4px) scale(1.012);
+    box-shadow: 0 6px 24px rgba(229,9,20,0.08);
+}
+
+.film-card img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+}
+
+.film-card h2 {
+    font-size: 1.3rem;
+    color: #e50914;
+    margin: 0.4rem 0 0.4rem 0;
+}
+
+.film-card p {
+    color: #b3b3b3;
+    font-size: 0.96rem;
+    margin: 0.5rem 0 0.2rem 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: #e50914;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: background 0.16s;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #b0060e;
+}
+
+footer {
+    background: #14151b;
+    color: #b3b3b3;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2.5rem;
+    font-size: 0.97rem;
+    border-top: 1px solid #23242b;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    .film-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Admin Panel</h2>
+<p>Welcome, {{ user.email }}!</p>
+
+<h3>Films Management</h3>
+<a href="/films/new">Add Film</a>
+<ul>
+    {% for film in films %}
+    <li>
+        {{ film.title }} 
+        <a href="/films/{{ film.id }}/edit">Edit</a>
+        <form action="/films/{{ film.id }}/delete" method="post" style="display:inline;">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+<h3>Sessions Management</h3>
+<a href="/sessions/new">Add Session</a>
+<ul>
+    {% for session in sessions %}
+    <li>
+        {{ session.start_time.strftime('%Y-%m-%d %H:%M') }} 
+        (Film: {{ session.film_id }}, Hall: {{ session.hall_id }})
+        <a href="/sessions/{{ session.id }}/edit">Edit</a>
+        <form action="/sessions/{{ session.id }}/delete" method="post" style="display:inline;">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+<h3>Bookings</h3>
+<ul>
+    {% for booking in bookings %}
+    <li>
+        User {{ booking.user_id }} - Session {{ booking.session_id }} - Seat {{ booking.seat_number }}
+        {% if booking.is_cancelled %} (Cancelled) {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

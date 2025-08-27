@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ film.title }}</h2>
+<img src="{{ film.poster_url or '/static/images/no_poster.png' }}" alt="{{ film.title }}" style="max-width:200px;">
+<p>{{ film.description }}</p>
+<p><strong>Duration:</strong> {{ film.duration }} min</p>
+<p><strong>Genre:</strong> {{ film.genre }}</p>
+<p><strong>Release Date:</strong> {{ film.date.strftime('%Y-%m-%d') if film.date else '' }}</p>
+<p><strong>Rating:</strong> {{ film.rate or "N/A" }}</p>
+
+<h3>Sessions</h3>
+<ul>
+    {% for session in sessions %}
+    <li>
+        {{ session.start_time.strftime('%Y-%m-%d %H:%M') }}
+        (Hall: {{ session.hall_id }})
+        <a href="/bookings/new?session_id={{ session.id }}">Book</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
